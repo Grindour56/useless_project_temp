@@ -24,7 +24,7 @@ VIBRACOIN with its high-tech sophistication, analyses your coin's signature , pa
 [How are you solving it? Keep it fun!]
 We use an MPU6050 to detect vibrations detected by the plate and turn it into a readable format with an ESP32.This data is then passed through an ML model which uses a hierarchial architecture to deduce to coins value.Accuracy is mixed but still accurate if there is only few coins in the plate.We then pass this to another laptop using internet(TCP-IP).
 
-Technical Details
+### Technical Details
 
 Hardware
 
@@ -76,9 +76,9 @@ The system combines vibration sensing, signal processing, machine learning, loca
 ### Implementation
 
 # Run
-# 🚀 How to Run
 
-## Prerequisites
+
+### Prerequisites
 
 Make sure the following are installed:
 
@@ -92,7 +92,7 @@ Make sure the following are installed:
 
 ---
 
-## 1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone <repository-url>
@@ -101,7 +101,7 @@ cd <repository-folder>
 
 ---
 
-## 2. Connect the Hardware
+### 2. Connect the Hardware
 
 Connect the **MPU6050** to the **ESP32**, then connect the ESP32 to the computer using a USB cable.
 
@@ -111,7 +111,7 @@ The ESP32 collects vibration and acceleration data from the MPU6050 and sends th
 
 ---
 
-## 3. Set Up the ML Environment
+### 3. Set Up the ML Environment
 
 Navigate to the ML directory:
 
@@ -153,7 +153,7 @@ python <ml-file>.py
 
 ---
 
-## 4. Start the Backend
+### 4. Start the Backend
 
 Open a new terminal and navigate to the backend directory:
 
@@ -181,7 +181,7 @@ npm start
 
 ---
 
-## 5. Start the Local LLM
+### 5. Start the Local LLM
 
 Run the **Liquid LFM 2.5B** model locally on the Windows system.
 
@@ -191,7 +191,7 @@ Make sure the LLM service is running before running the complete system.
 
 ---
 
-## 6. Start the Frontend
+### 6. Start the Frontend
 
 Open another terminal and navigate to the frontend directory:
 
@@ -215,7 +215,7 @@ Open the URL displayed in the terminal in your browser.
 
 ---
 
-## 7. System Pipeline
+### 7. System Pipeline
 
 Once all components are running, the complete system operates as follows:
 
@@ -261,7 +261,7 @@ Once all components are running, the complete system operates as follows:
 
 ---
 
-## ⚠️ Important Notes
+### ⚠️ Important Notes
 
 * Keep the ESP32 connected through USB while running the application.
 * Select the correct **COM/serial port** when uploading the ESP32 firmware.
@@ -271,11 +271,12 @@ Once all components are running, the complete system operates as follows:
 * If components cannot communicate with each other, verify that the required ports and services are running correctly.
 
 
-### Project Documentation
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+
+<img width="678" height="1666" alt="image" src="https://github.com/user-attachments/assets/1ba1ad2e-edd2-49af-898c-61b32b1f7421" />
+
+Our project combines the physical layer , with 
 
 For Hardware:
 
