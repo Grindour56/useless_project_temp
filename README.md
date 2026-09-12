@@ -20,11 +20,11 @@ Our project detects the value of a coin mainly 1,2,5,10 and 20 rupees, using an 
 ### The Problem (that doesn't exist)
 There isn't a reliable solution for blind people to know the value of their coins(OF course they can ask someone else or touch the coins, but its needs to be AI-POWEREDDD).
 ### The Solution (that nobody asked for)
-VIBRACOIN with its high-tech sophistication, analyses your coin's signature , passes the oscillations through a physics based hierarchial ML model to reveal the value with a twist, ridiculing that stingy prick in nadan yet polite way.
-[How are you solving it? Keep it fun!]
-We use an MPU6050 to detect vibrations detected by the plate and turn it into a readable format with an ESP32.This data is then passed through an ML model which uses a hierarchial architecture to deduce to coins value.Accuracy is mixed but still accurate if there is only few coins in the plate.We then pass this to another laptop using internet(TCP-IP).
+VIBRACOIN with its high-tech sophistication, analyses your coin's signature , passes the oscillations through a physics based hierarchical ML model to reveal the value with a twist, ridiculing that stingy prick in a nadan yet polite way.
 
-Technical Details
+We use an MPU6050 to detect vibrations detected by the plate and turn it into a readable format with an ESP32.This data is then passed through an ML model which uses a hierarchical architecture to deduce to coins value.Accuracy is mixed but still accurate if there is only few coins in the plate.We then pass this to another laptop using internet(TCP-IP).
+
+##Technical Details
 
 Hardware
 
@@ -36,7 +36,7 @@ Signal Processing & ML
 
 - Raw X, Y and Z-axis acceleration data is collected at approximately 200 Hz.
 - The vibration signal is filtered and segmented into individual impact events.
-- Time-domain and frequency-domain features are extracted from each event, including amplitude, RMS, energy, peak behaviour, FFT-based features and post-impact/ring-down characteristics.
+- Time-domain and frequency-domain features are extracted from each event, including amplitude, RMS, energy, peak behavior, FFT-based features and post-impact/ring-down characteristics.
 - A machine-learning classifier predicts the denomination:
   ₹1, ₹2, ₹5, ₹10 or ₹20.
 - The model produces a probability/confidence score along with the predicted denomination.
