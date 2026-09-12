@@ -20,41 +20,41 @@ Our project detects the value of a coin mainly 1,2,5,10 and 20 rupees, using an 
 ### The Problem (that doesn't exist)
 There isn't a reliable solution for blind people to know the value of their coins(OF course they can ask someone else or touch the coins, but its needs to be AI-POWEREDDD).
 ### The Solution (that nobody asked for)
-VIBRACOIN with its high-tech sophistication, analyses your coin's signature , passes the oscillations through a physics based hierarchial ML model to reveal the value with a twist, ridiculing that stingy prick in nadan yet polite way.
-[How are you solving it? Keep it fun!]
-We use an MPU6050 to detect vibrations detected by the plate and turn it into a readable format with an ESP32.This data is then passed through an ML model which uses a hierarchial architecture to deduce to coins value.Accuracy is mixed but still accurate if there is only few coins in the plate.We then pass this to another laptop using internet(TCP-IP).
+VIBRACOIN with its high-tech sophistication, analyses your coin's signature , passes the oscillations through a physics based hierarchical ML model to reveal the value with a twist, ridiculing that stingy prick in a nadan yet polite way.
 
-Technical Details
+We use an MPU6050 to detect vibrations detected by the plate and turn it into a readable format with an ESP32.This data is then passed through an ML model which uses a hierarchical architecture to deduce to coins value.Accuracy is mixed but still accurate if there is only few coins in the plate.We then pass this to another laptop using internet(TCP-IP).
 
-Hardware
+## Technical Details
+
+### Hardware
 
 - MPU6050 accelerometer/gyroscope captures vibration and acceleration produced when a coin impacts the sensing plate.
 - ESP32 collects the sensor data and communicates with the software system over Wi-Fi.
 - A physical plate acts as the vibration-transmitting surface.
 
-Signal Processing & ML
+### Signal Processing & ML
 
 - Raw X, Y and Z-axis acceleration data is collected at approximately 200 Hz.
 - The vibration signal is filtered and segmented into individual impact events.
-- Time-domain and frequency-domain features are extracted from each event, including amplitude, RMS, energy, peak behaviour, FFT-based features and post-impact/ring-down characteristics.
+- Time-domain and frequency-domain features are extracted from each event, including amplitude, RMS, energy, peak behavior, FFT-based features and post-impact/ring-down characteristics.
 - A machine-learning classifier predicts the denomination:
   ₹1, ₹2, ₹5, ₹10 or ₹20.
 - The model produces a probability/confidence score along with the predicted denomination.
 
-AI Pipeline
+### AI Pipeline
 
 - The ML prediction is passed to a locally running Liquid/LFM model through Ollama.
 - Liquid interprets the numerical prediction and impact characteristics.
 - The interpreted result is passed to the Gemini API, which generates a short, quirky Malayalam reaction.
 - A fallback mechanism allows the system to continue functioning if the local model or Gemini API is unavailable.
 
-Backend
+### Backend
 
 - Node.js + Express handles communication between the hardware/ML system and the web application.
 - REST API endpoints receive predictions from the ESP32/ML pipeline.
 - WebSockets provide real-time updates to the frontend without polling.
 
-Frontend
+### Frontend
 
 - React + Vite provides a live visualization dashboard.
 - Displays:
@@ -67,7 +67,7 @@ Frontend
   - Connection/model status
 - Browser-based Malayalam text-to-speech is used to speak the generated reaction.
 
-Overall Pipeline
+### Overall Pipeline
 
 MPU6050 → ESP32 → ML Model → Liquid/LFM → Gemini API → Malayalam TTS → React Dashboard
 
@@ -81,8 +81,12 @@ The system combines vibration sensing, signal processing, machine learning, loca
 ### Project Documentation
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+<img width="678" height="1666" alt="image" src="https://github.com/user-attachments/assets/cb91a0d7-45ab-4b34-8fe5-d6a2e49a3175" />
+
+The workflow shows the three main parts of our system and their components 
+1.Physical Detection
+2.Linux Laptop:This is where the local prediction and training takes place.
+3.Windows laptop:Website hosting and local llm interpretation and parsing.
 
 For Hardware:
 
@@ -91,20 +95,21 @@ For Hardware:
 
 
 
-MPU6050 and ESP32 connection.ESP32 is connected tot eh computer via USB.
+MPU6050 and ESP32 connection.ESP32 is connected to the computer via USB-C to A.
 
 # Build Photos
 Components
-<img width="515" height="388" alt="images" src="https://github.com/user-attachments/assets/f2d88fa1-4ee3-4bfc-9816-b6142ce1144c" />
 
-<img width="302" height="600" alt="image" src="https://github.com/user-attachments/assets/2ce5fc91-6e0f-4d83-9821-618b58d6474c" />
+<img width="249" height="246" alt="650637818-f2d88fa1-4ee3-4bfc-9816-b6142ce1144c" src="https://github.com/user-attachments/assets/c0af743b-0c29-465f-8a9b-6f4e1f9773f2" />
 
-MPU6050 → ESP32
+<img width="251" height="503" alt="650637849-2ce5fc91-6e0f-4d83-9821-618b58d6474c" src="https://github.com/user-attachments/assets/ce16cad0-a8d6-4f0b-8ce2-bb166fd98654" />
 
 
-![Final](Add photo of final product here)
-*Explain the final build*
+MPU6050 & ESP32
+
 <img width="1904" height="853" alt="Screenshot 2026-09-12 063313" src="https://github.com/user-attachments/assets/73a3af7b-60c9-4d8f-a8ed-427f83c2ab7c" />
+
+We taped an MPU6050 to the bottom-side of a metal plate to detect vibrations.An ESP32 helps for connecting the module to the laptop and translating the data into machine readable format.
 
 ### Project Demo
 # Video
@@ -113,7 +118,7 @@ MPU6050 → ESP32
 
 
 ## Team Contributions
-- Teja Thomas: Gemini API and local Liquid AI modal
+- Teja Thomas: Gemini API ,Web hosting and local Liquid AI modal.
 - Nathan George: Local ML model predicting coin values and esp32 , mpu6050 vibration reader
 
 ---
