@@ -276,7 +276,7 @@ Once all components are running, the complete system operates as follows:
 
 <img width="678" height="1666" alt="image" src="https://github.com/user-attachments/assets/1ba1ad2e-edd2-49af-898c-61b32b1f7421" />
 
-Our project combines the physical layer , with 
+Our project recieves data from the physical layer, processes it through an ML model on Linux laptop, which then passes the connections via TCP/IP to another laptop which then uses a local LLM (lfm2.5), to process it and then sends to Gemini API which outputs the final message.
 
 For Hardware:
 
@@ -285,20 +285,19 @@ For Hardware:
 
 
 
-MPU6050 and ESP32 connection.ESP32 is connected tot eh computer via USB.
+MPU6050 and ESP32 connection.ESP32 is connected to the computer via USB.
 
 # Build Photos
 Components
+
 <img width="515" height="388" alt="images" src="https://github.com/user-attachments/assets/f2d88fa1-4ee3-4bfc-9816-b6142ce1144c" />
 
 <img width="302" height="600" alt="image" src="https://github.com/user-attachments/assets/2ce5fc91-6e0f-4d83-9821-618b58d6474c" />
 
 MPU6050 → ESP32
 
-
-![Final](Add photo of final product here)
-*Explain the final build*
 <img width="1904" height="853" alt="Screenshot 2026-09-12 063313" src="https://github.com/user-attachments/assets/73a3af7b-60c9-4d8f-a8ed-427f83c2ab7c" />
+
 
 ### Project Demo
 # Video
@@ -307,7 +306,7 @@ MPU6050 → ESP32
 
 
 ## Team Contributions
-- Teja Thomas: Gemini API and local Liquid AI modal
+- Teja Thomas: Gemini API,Fullstack web-hosting and local Liquid AI modal
 - Nathan George: Local ML model predicting coin values and esp32 , mpu6050 vibration reader
 
 ---
