@@ -42,6 +42,7 @@ Signal Processing & ML
 - The model produces a probability/confidence score along with the predicted denomination.
 
 AI Pipeline
+
 <img width="522" height="155" alt="image" src="https://github.com/user-attachments/assets/07b54ed0-9301-4f5e-bfe9-4ee41ccb08b7" />
 <img width="447" height="447" alt="image" src="https://github.com/user-attachments/assets/553deddc-39fe-45c4-bef7-57462ab6a64f" />
 
