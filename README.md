@@ -45,7 +45,7 @@ AI Pipeline
 
 <img width="522" height="155" alt="image" src="https://github.com/user-attachments/assets/07b54ed0-9301-4f5e-bfe9-4ee41ccb08b7" />
 
-<img width="447" height="447" alt="image" src="https://github.com/user-attachments/assets/553deddc-39fe-45c4-bef7-57462ab6a64f" />
+<img width="447" height="200" alt="image" src="https://github.com/user-attachments/assets/553deddc-39fe-45c4-bef7-57462ab6a64f" />
 
 
 - The ML prediction is passed to a locally running Liquid/LFM model through Ollama.
@@ -57,8 +57,8 @@ Backend
 
 
 
-<img width="570" height="350" alt="image" src="https://github.com/user-attachments/assets/32d50c2b-f2bc-4022-a6d8-177e40117014" />
-<img width="738" height="336" alt="image" src="https://github.com/user-attachments/assets/b9da7983-a66e-4a9e-90d9-462ad18074e9" />
+<img width="350" height="200" alt="image" src="https://github.com/user-attachments/assets/32d50c2b-f2bc-4022-a6d8-177e40117014" />
+<img width="350" height="100" alt="image" src="https://github.com/user-attachments/assets/b9da7983-a66e-4a9e-90d9-462ad18074e9" />
 
 
 - Node.js + Express handles communication between the hardware/ML system and the web application.
@@ -67,8 +67,8 @@ Backend
 
 Frontend
 
-<img width="468" height="427" alt="image" src="https://github.com/user-attachments/assets/623ce6fa-a27b-4ec4-8001-a524d46ca6a9" />
-<img width="735" height="272" alt="image" src="https://github.com/user-attachments/assets/8eeafc09-7346-4ea7-a16f-c76571dfd1c1" />
+<img width="428" height="250" alt="image" src="https://github.com/user-attachments/assets/623ce6fa-a27b-4ec4-8001-a524d46ca6a9" />
+<img width="560" height="272" alt="image" src="https://github.com/user-attachments/assets/8eeafc09-7346-4ea7-a16f-c76571dfd1c1" />
 
 
 - React + Vite provides a live visualization dashboard.
