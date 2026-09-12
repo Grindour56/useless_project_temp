@@ -54,6 +54,7 @@ AI Pipeline
 - A fallback mechanism allows the system to continue functioning if the local model or Gemini API is unavailable.
 
 Backend
+
 <img width="570" height="350" alt="image" src="https://github.com/user-attachments/assets/32d50c2b-f2bc-4022-a6d8-177e40117014" />
 <img width="738" height="336" alt="image" src="https://github.com/user-attachments/assets/b9da7983-a66e-4a9e-90d9-462ad18074e9" />
 
@@ -63,6 +64,7 @@ Backend
 - WebSockets provide real-time updates to the frontend without polling.
 
 Frontend
+
 <img width="468" height="427" alt="image" src="https://github.com/user-attachments/assets/623ce6fa-a27b-4ec4-8001-a524d46ca6a9" />
 <img width="735" height="272" alt="image" src="https://github.com/user-attachments/assets/8eeafc09-7346-4ea7-a16f-c76571dfd1c1" />
 
